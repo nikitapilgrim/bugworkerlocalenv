@@ -24,8 +24,6 @@ export default {
 async function handleRequest(env: Env) {
 	const id = env.Test.idFromName("test");
 	const obj = env.Test.get(id);
-	const parserUrl = "https://parser.com";
-	const url = `${parserUrl}`;
 	const resp = await obj.fetch("https://example.com");
 	const data = await resp.json();
 	return new Response(JSON.stringify({ worker: env, ...data }));
