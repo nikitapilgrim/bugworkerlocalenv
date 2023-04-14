@@ -1,0 +1,12 @@
+name = "test"
+main = "src/index.ts"
+compatibility_date = "2023-04-14"
+
+services = [
+	{ binding = "random", service = "random" },
+]
+
+[durable_objects]
+bindings = [
+	{name = "Test", class_name = "Test"},
+]
